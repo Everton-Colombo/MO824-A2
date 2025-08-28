@@ -1,0 +1,27 @@
+# Java
+*.class
+*.log
+hs_err_pid*
+
+# Build outputs
+bin/
+out/
+build/
+target/
+
+# Maven/Gradle
+.mvn/
+.gradle/
+**/build/
+
+# IDEs
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
