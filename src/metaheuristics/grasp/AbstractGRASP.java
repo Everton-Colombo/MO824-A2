@@ -100,6 +100,12 @@ public abstract class AbstractGRASP<E> {
 	 */
 	public abstract void updateCL();
 
+
+	/**
+	 * Updates the Restricted Candidate List
+	 */
+	public abstract void updateRCL();
+
 	/**
 	 * Creates a new solution which is empty, i.e., does not contain any
 	 * element.

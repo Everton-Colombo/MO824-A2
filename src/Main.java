@@ -5,6 +5,7 @@ import java.util.Comparator;
 
 import metaheuristics.grasp.AbstractGRASP;
 import problems.qbf.solvers.GRASP_QBF;
+import problems.sc_qbf.ScQbfInstance;
 import solutions.Solution;
 
 public class Main {
@@ -25,7 +26,7 @@ public class Main {
         System.out.println("  Time = " + ((end - start) / 1000.0) + " s\n");
     }
 
-    public static void main(String[] args) throws IOException {
+    private static void runTests(String[] args) throws IOException{
         // Defaults
         double alpha = 0.05;
         int iterations = 1000;
@@ -65,5 +66,12 @@ public class Main {
             System.err.println("Invalid path: " + path);
             System.exit(1);
         }
+    }
+
+    public static void main(String[] args) throws IOException {
+        // runTests(args);
+
+        ScQbfInstance instance = ScQbfInstance.fromFile("1.txt");
+        System.out.println(instance);
     }
 }
