@@ -100,12 +100,6 @@ public abstract class AbstractGRASP<E> {
 	 */
 	public abstract void updateCL();
 
-
-	/**
-	 * Updates the Restricted Candidate List
-	 */
-	public abstract void updateRCL();
-
 	/**
 	 * Creates a new solution which is empty, i.e., does not contain any
 	 * element.
@@ -126,7 +120,7 @@ public abstract class AbstractGRASP<E> {
 	/**
 	 * Constructor for the AbstractGRASP class.
 	 * 
-	 * @param objFunction
+	 * @param objFunction	
 	 *            The objective function being minimized.
 	 * @param alpha
 	 *            The GRASP greediness-randomness parameter (within the range

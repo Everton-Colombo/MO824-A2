@@ -174,4 +174,10 @@ public class GRASP_QBF extends AbstractGRASP<Integer> {
 
 	}
 
+	@Override
+	public void updateRCL() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
