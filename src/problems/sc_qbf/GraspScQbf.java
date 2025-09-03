@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import metaheuristics.grasp.AbstractGRASP;
 import solutions.Solution;
-
+>
 public class GraspScQbf extends AbstractGRASP<Integer> {
 
     private GraspScQbfConfig config = GraspScQbfConfig.getDefault();
