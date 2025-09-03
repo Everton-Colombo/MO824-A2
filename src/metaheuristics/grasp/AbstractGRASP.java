@@ -28,7 +28,7 @@ public abstract class AbstractGRASP<E> {
 	/**
 	 * a random number generator
 	 */
-	static Random rng = new Random(0);
+	protected static Random rng = new Random(0);
 
 	/**
 	 * the objective function being optimized
@@ -149,7 +149,7 @@ public abstract class AbstractGRASP<E> {
 		cost = Double.POSITIVE_INFINITY;
 
 		/* Main loop, which repeats until the stopping criteria is reached. */
-		while (!constructiveStopCriteria()) {
+		while (!constructiveStopCriteria(cost)) {
 
 			double maxCost = Double.NEGATIVE_INFINITY, minCost = Double.POSITIVE_INFINITY;
 			cost = ObjFunction.evaluate(sol);
@@ -221,8 +221,8 @@ public abstract class AbstractGRASP<E> {
 	 * 
 	 * @return true if the criteria is met.
 	 */
-	public Boolean constructiveStopCriteria() {
-		return (cost > sol.cost) ? false : true;
+	public Boolean constructiveStopCriteria(Double newCost) {
+		return (newCost > sol.cost);
 	}
 
 }
